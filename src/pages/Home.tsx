@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import coinImg from "../assets/coin.png";
 import avatarImg from "../assets/frog.png";
+import { handleClick, animationTap, plusOneCoin } from "../hooks/AnimationHome";
 
 function Home(): JSX.Element {
   const [score, setScore] = useState(0);
-
-  const handleClick = () => {
-    setScore((a) => a + 1);
-  };
+  const [positionX, setPositionX] = useState(0);
+  const [positionY, setPositionY] = useState(0);
 
   return (
     <div className="game">
@@ -15,7 +14,15 @@ function Home(): JSX.Element {
         <img src={coinImg} alt="coin" />
         <p>{score}</p>
       </div>
-      <div onClick={handleClick} className="game-person">
+      <div
+        onClick={(event) =>
+          handleClick(event, setScore, setPositionX, setPositionY)
+        }
+        className="game-person"
+        style={{
+          transform: `rotateX(${positionX}deg) rotateY(${positionY}deg)`,
+        }}
+      >
         <img className="game-person-image" src={avatarImg} alt="frog" />
       </div>
     </div>
