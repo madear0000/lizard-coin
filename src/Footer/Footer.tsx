@@ -1,6 +1,10 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoneyBill, faUser, faShop } from "@fortawesome/free-solid-svg-icons";
+import {
+  faMoneyBill,
+  faUser,
+  faListCheck,
+} from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
 function Footer(): JSX.Element {
@@ -16,9 +20,9 @@ function Footer(): JSX.Element {
           <FontAwesomeIcon icon={faUser} />
         </div>
       </Link>
-      <Link to="/shop" className="footer-page">
+      <Link to="/tasks" className="footer-page">
         <div className="footer-page">
-          <FontAwesomeIcon icon={faShop} />
+          <FontAwesomeIcon icon={faListCheck} />
         </div>
       </Link>
     </footer>
