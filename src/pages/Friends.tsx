@@ -1,5 +1,3 @@
-import React from "react";
-
 function Friends(): JSX.Element {
   return (
     <div className="text-content">

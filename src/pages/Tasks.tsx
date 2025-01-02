@@ -1,5 +1,3 @@
-import React from "react";
-
 function Tasks(): JSX.Element {
   return (
     <div className="text-content">

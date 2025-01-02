@@ -18,7 +18,7 @@ function Home(): JSX.Element {
 
   const progressPercentage =
     maxScoreForCurrentLevel > 0
-      ? (levelScore / maxScoreForCurrentLevel) * 100
+      ? ((levelScore ?? 0) / maxScoreForCurrentLevel) * 100
       : 0;
 
   const handleClick = (
